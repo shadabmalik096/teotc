@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teotc</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js' %>
+    
+  </head>
+
+  <body>
+    <div class="preload">
+      <%= image_tag 'white-logo.png'%>
+    </div>
+
+    <div class="content">
+      <%= render partial: 'layouts/header' %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

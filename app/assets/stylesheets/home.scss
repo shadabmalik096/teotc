@@ -1,0 +1,376 @@
+@font-face {font-family: "Vertrina W01 Bold";
+  src: url("296f13b82470ff5bbbad64d837f7b1b4.eot"); /* IE9*/
+  src: url("296f13b82470ff5bbbad64d837f7b1b4.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("296f13b82470ff5bbbad64d837f7b1b4.woff2") format("woff2"), /* chrome、firefox */
+  url("296f13b82470ff5bbbad64d837f7b1b4.woff") format("woff"), /* chrome、firefox */
+  url("296f13b82470ff5bbbad64d837f7b1b4.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("296f13b82470ff5bbbad64d837f7b1b4.svg#Vertrina W01 Bold") format("svg"); /* iOS 4.1- */
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.preload { 
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    height: 50px;
+    transform: scale(1.5);
+  }
+}
+
+.content {
+  display: none;
+
+  .teotc_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    background-color: transparent;
+    padding: 0 110px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    .logo_box {
+
+      .logo_box-img {
+        height: 40px;
+        visibility: hidden;
+
+        &.top-logo {
+          position: fixed;
+          -webkit-animation-name: move_logo;
+          -webkit-animation-duration: 1.4s; 
+          -webkit-animation-fill-mode: forwards;
+          animation-name: move_logo;
+          animation-duration: 1.4s;  
+          animation-fill-mode: forwards;
+
+          @-webkit-keyframes move_logo {
+            from {
+              left: 50%;
+              top: 50%;
+              transform: scale(1.5);
+              visibility: visible;
+            }
+            to {
+              position: relative;
+              left: 0px;
+              top: 0px;
+              transform: scale(1);
+              visibility: visible;
+            }
+          }
+          @keyframes move_logo {
+            from {
+              left: 50%;
+              top: 50%;
+              transform: scale(1.5);
+              visibility: visible;
+            }
+            to {
+              position: relative;
+              left: 0px;
+              top: 0px;
+              transform: scale(1);
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+
+    .menu_box {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .menu_box-link {
+        margin: 0 10px;
+        padding: 5px 10px;
+        color: #fff;
+        transition: 0.2s;
+
+        &.active {
+          font-weight: bold;
+        }
+        &:hover {
+          text-decoration: none;
+          font-weight: bold;
+          color: #fff;
+        }
+      }
+    }
+
+    .session_start_box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 20%;
+      justify-content: flex-end;
+
+      .session_start_box-link {
+        margin: 0 10px;
+        padding: 5px 10px;
+        color: #fff;
+        transition: 0.2s;
+
+        &:hover {
+          text-decoration: none;
+          font-weight: bold;
+          color: #fff;
+        }
+      }
+      .session_start_box-link-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 120px;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: #46dcfc;
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+          border-color: #2a70fa;
+        }
+      }
+    }
+  }
+
+  .galaxy_section-bg {
+    background: #000;
+    height: 100vh;
+
+    .custom_slide-box {
+      .mySlides {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+
+        .custom-overlay {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.3);
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        .carousel-caption {
+          position: absolute !important;
+          bottom: 20px !important;
+          left: 120px !important;
+          right: initial !important;
+          z-index: 10 !important;
+          padding-top: 0px !important;
+          padding-bottom: 20px !important;
+          color: #fff !important;
+          text-align: center !important;
+          text-shadow: 0 1px 2px rgba(0,0,0,.6) !important;
+          height: 343px;
+          top: 45%;
+          width: 420px;
+          text-align: left !important;
+
+          h2 {
+            font-size: 48px;
+            margin: 0;
+            font-family: "Vertrina W01 Bold";
+          }
+          p {
+            font-size: 18px;
+            line-height: 2;
+            margin: 10px 0;
+          }
+          .learn-more {
+            padding: 0;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: underline;
+          }
+          .show_hidden-field-btn {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(270deg);
+            background: #f7f7f7;
+            border-radius: 50%;
+            color: #000;
+            transition: 0.3s;
+            margin-top: 20px;
+
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+            }
+
+            .down-arrow {
+              width: auto;
+              height: 16px;
+            }
+          }
+        }
+      }
+
+      .image_slider-button-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        height: fit-content;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: calc(100% - 640px);
+          height: 1px;
+          background: #ccc;
+          right: 85px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        .slide-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          padding: 0;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+          svg {
+            height: 30px;
+            width: 25px;
+
+            g path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .galaxy_section-content {
+    padding: 120px 0;
+    position: relative;
+    height: 100vh;
+    background-color: #fff;
+
+    .show_top-hidden-field-btn {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2a70fa;
+      border-radius: 50%;
+      color: #000;
+      position: absolute;
+      top: 50px;
+      left: 135px;
+      transition: 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+      }
+
+      .up-arrow {
+        width: auto;
+        height: 16px;
+      }
+    }
+
+    .inner-content-section {
+      height: calc(100vh - 120px);
+      overflow-y: auto;
+      padding-bottom: 120px;
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .box-content {
+        padding: 0 120px;
+
+        .small_text {
+          font-size: 12px;
+          font-weight: 600;
+          color: #484848;
+          margin-top: 15px;
+        }
+
+        a.small_text {
+          font-size: 12px;
+          font-weight: 600;
+          color: #484848;
+          margin-top: 15px;
+
+          &:hover {
+            color: #484848;
+          }
+        }
+
+        .content-heading {
+          font-size: 48px;
+          color: #000;
+          font-weight: normal;
+          margin: 36px 0;
+          font-family: "Vertrina W01 Bold";
+        }
+
+        .content-pera {
+          margin: 0 0 40px;
+          font-size: 18px;
+          line-height: 2;
+        }
+      }
+
+      .earth-img-box {
+        height: 550px;
+        width: calc(100% - 20px);
+        margin-bottom: 50px;
+
+        .earth {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

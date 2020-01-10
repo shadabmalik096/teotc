@@ -1,0 +1,16 @@
+<header class="teotc_header">
+  <div class="logo_box">
+    <%= link_to 'javascript:;', id:'logo_link' do %>
+      <%= image_tag 'teotc_logo.png', class: 'logo_box-img' %>
+    <% end %>
+  </div>
+  <div class="menu_box">
+    <%= link_to 'Menu1', 'javascript:;', class: 'menu_box-link active' %>
+    <%= link_to 'Menu2', 'javascript:;', class: 'menu_box-link' %>
+    <%= link_to 'Menu3', 'javascript:;', class: 'menu_box-link' %>     
+  </div>
+  <div class="session_start_box">
+    <%= link_to 'Login', 'javascript:;', class: 'session_start_box-link' %>
+    <%= link_to 'Register', 'javascript:;', class: 'session_start_box-link-btn' %>
+  </div>
+</header>
